@@ -25,7 +25,7 @@ h1 {
   font-size: 6rem;
 }
 
-.app {
+.page {
    width: 100%;
    height: 100vh;
    position: relative;
@@ -33,8 +33,12 @@ h1 {
    color: #fff;
 }
 
+.form {
+  border: #f8f8f8;
+}
+
 /* the before selector adds style that show behind the text */
-.app:before {
+.page:before {
   content: '';
   background: url('./assets/background.jpg') no-repeat center center/cover;
   position: absolute;
@@ -45,19 +49,12 @@ h1 {
   z-index: -1;
 }
 
-.app .search-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  top: 10%;
-}
-
-.app .search {
+.page .search {
   text-align: center;
   padding: 1rem;
 }
 
-.app input {
+.page input {
   padding: .7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
@@ -70,32 +67,29 @@ h1 {
 }
 
 /* Everything in this container will be part of a flex model */
-.container {
+.content {
   max-width: 700px;
   height: 700px;
   margin: auto;
   padding: 0 1rem;
   position: relative;
   top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-.app .top {
+.page .top {
   width: 100%;
   margin: 1rem auto;
 }
 
-.app .description {
+.page .description {
   position: relative;
   right: -90%;
   transform-origin: 0 0; /* without this line transform does not work*/
   transform: rotate(269deg);
 }
 
-.app .bottom {
-  display: flex;
+.page .bottom {
+  /* display: flex; */
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
